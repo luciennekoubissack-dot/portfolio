@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ActforGood - Projet</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="project-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="project-nav">
+        <a href="../index.html#portfolio" class="back-btn"><i class="fas fa-arrow-left"></i> Retour au portfolio</a>
+        <div class="theme-toggle" onclick="toggleTheme()" style="cursor: pointer;">
+            <i class="fas fa-moon"></i>
+        </div>
+    </nav>
+
+    <header class="hero-project">
+        <div class="hero-bg">
+            <img src="../assets/images/projects/actforgood.jpg" alt="ActforGood Hero" onerror="this.src='https://placehold.co/1920x1080/27ae60/ffffff?text=ActforGood'">
+        </div>
+        <div class="hero-content reveal-hidden">
+            <h1>ActforGood</h1>
+            <div class="project-badges">
+                <span class="badge">Angular</span>
+                <span class="badge">React Native</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="project-detail">
+        <div class="project-content-card reveal-hidden">
+            <div class="project-section">
+                <h2><i class="fas fa-info-circle"></i> Description</h2>
+                <p>Plateforme sociale dédiée aux actions caritatives et au bénévolat. Connecte les organisations à but non lucratif avec des volontaires motivés pour créer un impact positif dans la communauté.</p>
+            </div>
+
+            <div class="project-section">
+                <h2><i class="fas fa-bullseye"></i> Objectifs</h2>
+                <ul>
+                    <li>Faciliter l'engagement bénévole</li>
+                    <li>Connecter les ONG avec des volontaires</li>
+                    <li>Suivre l'impact des actions caritatives</li>
+                    <li>Créer une communauté solidaire</li>
+                    <li>Offrir une expérience cross-platform (web et mobile)</li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h2><i class="fas fa-graduation-cap"></i> Expérience acquise</h2>
+                <ul>
+                    <li>Développement d'applications hybrides</li>
+                    <li>Architecture Angular pour le web</li>
+                    <li>Développement mobile avec React Native</li>
+                    <li>Intégration d'API REST</li>
+                    <li>Gestion d'authentification utilisateur</li>
+                    <li>Système de notifications push</li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h2><i class="fas fa-images"></i> Aperçu</h2>
+                <div class="project-gallery">
+                    <div class="gallery-item reveal-hidden">
+                        <img src="../assets/images/projects/actforgood-preview.jpg" alt="Aperçu de ActforGood" onerror="this.src='https://placehold.co/800x500/27ae60/white?text=Aperçu+Web'">
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-section">
+                <h2><i class="fas fa-link"></i> Liens & Actions</h2>
+                <div class="project-actions">
+                    <a href="#" class="btn-project btn-main" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Voir l'application web
+                    </a>
+                    <a href="#" class="btn-project btn-main" target="_blank">
+                        <i class="fas fa-mobile-alt"></i> Télécharger l'app mobile
+                    </a>
+                    <a href="#" class="btn-project btn-outline" target="_blank">
+                        <i class="fab fa-github"></i> Code source
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <footer class="project-footer">
+            <div class="copyright">© 2025 Koubissack Baseteck Colette Lucienne</div>
+        </footer>
+    </div>
+
+    <script src="project-script.js"></script>
+    <script>
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('portfolio-theme', newTheme);
+            const icon = document.querySelector('.theme-toggle i');
+            icon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+        }
+    </script>
+</body>
+</html>

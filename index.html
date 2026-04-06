@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOUBISSACK BASETECK Colette Lucienne - Portfolio</title>
+    <!-- Polices -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,600&display=swap"
+        rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header / Hero -->
+    <header id="home">
+        <nav>
+            <div class="nav-logo">KBCL</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Accueil</a></li>
+                <li><a href="#about" class="nav-link">À propos</a></li>
+                <li><a href="#skills" class="nav-link">Compétences</a></li>
+                <li><a href="#education" class="nav-link">Formation</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-btn" aria-label="Changer de thème"><i
+                    class="fas fa-moon"></i></button>
+        </nav>
+        <canvas id="particle-canvas"></canvas>
+        <div class="hero-content centered-hero">
+            <h1 class="hero-name">KOUBISSACK BASETECK<br>Colette Lucienne</h1>
+            <p class="hero-role">Développeur Logiciel</p>
+        </div>
+        <a href="#about" class="scroll-indicator"><i class="fas fa-chevron-down"></i></a>
+    </header>
+
+    <!-- About Me -->
+    <section id="about">
+        <h2 class="section-title">À propos de moi</h2>
+        <div class="section-separator">
+            <i class="fas fa-caret-down"></i>
+        </div>
+        <div class="about-content">
+            <div class="about-profile">
+                <div class="about-photo">
+                    <img src="assets/images/Photocv.jpg" alt="Photo de Colette" class="about-img">
+                </div>
+                <div class="about-text">
+                    <h3>Développeuse Frontend & UI/UX Designer</h3>
+                    <p>
+                        Étudiante en Cycle Ingénieur Informatique et Systèmes d'Information à l'USJC, je suis passionnée
+                        par la création d'interfaces intuitives et performantes. Alliant une solide maîtrise technique
+                        (Développement Web et Mobile) à une sensibilité créative (UI/UX), je conçois des solutions
+                        numériques innovantes. Proactive et dotée d'un leadership forgé par mon engagement associatif
+                        (PMI), je suis prête à m'investir pleinement.
+                    </p>
+
+                    <h3>Savoir-être (Soft Skills)</h3>
+                    <div class="characteristics">
+                        <div class="char-item"><i class="fas fa-trophy"></i> Leadership</div>
+                        <div class="char-item"><i class="fas fa-people-carry"></i> Esprit d'équipe</div>
+                        <div class="char-item"><i class="fas fa-brain"></i> Intelligence émotionnelle</div>
+                        <div class="char-item"><i class="fas fa-lightbulb"></i> Créativité & Proactivité</div>
+                    </div>
+
+                    <h3>Recherche de Stage</h3>
+                    <p>
+                        Je suis actuellement à la recherche d'un <strong>stage professionnel</strong> pour mettre en
+                        pratique mon expertise technique et contribuer activement aux défis d'innovation de votre
+                        entreprise. Mon objectif : créer de l'impact tout en continuant d'évoluer dans un environnement
+                        technologique stimulant.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+        <h2 class="section-title">Mes compétences</h2>
+        <div class="section-separator">
+            <i class="fas fa-caret-down"></i>
+        </div>
+        <div class="skills-categories">
+            <div class="skill-category">
+                <h3><i class="fas fa-code"></i> Développement Web</h3>
+                <div class="skills-container">
+                    <div class="skill-circle card-3d">HTML/CSS/JavaScript</div>
+                    <div class="skill-circle card-3d">React-Native</div>
+                    <div class="skill-circle card-3d">Angular</div>
+                    <div class="skill-circle card-3d">Node.js</div>
+                    <div class="skill-circle card-3d">MySQL/PostgreSQL</div>
+                    <div class="skill-circle card-3d">Docker</div>
+                    <div class="skill-circle card-3d">WordPress</div>
+                    <div class="skill-circle card-3d">Linux</div>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3><i class="fas fa-palette"></i> Design UI/UX</h3>
+                <div class="skills-container">
+                    <div class="skill-circle card-3d">UI/UX</div>
+                    <div class="skill-circle card-3d">Figma</div>
+                    <div class="skill-circle card-3d">Adobe XD</div>
+                    <div class="skill-circle card-3d">Prototyping</div>
+                    <div class="skill-circle card-3d">Wireframing</div>
+                    <div class="skill-circle card-3d">Design System</div>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3><i class="fas fa-globe"></i> Langues</h3>
+                <div class="skills-container">
+                    <div class="skill-circle card-3d">Français<br></div>
+                    <div class="skill-circle card-3d">Anglais<br></div>
+                    <div class="skill-circle card-3d">Allemand<br></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Experience -->
+    <section id="education">
+        <h2 class="section-title">Formation & Expérience</h2>
+        <div class="section-separator">
+            <i class="fas fa-caret-down"></i>
+        </div>
+
+        <div class="timeline-container">
+            <div class="timeline">
+                <div class="timeline-item card-3d" onclick="this.classList.toggle('expanded')">
+                    <div class="timeline-date">2024 - En cours</div>
+                    <div class="timeline-content">
+                        <h3><i class="fas fa-graduation-cap"></i> Cycle Ingénieur Informatique et Systèmes d'Information
+                            <i class="fas fa-chevron-down expand-icon"></i></h3>
+                        <div class="timeline-details">
+                            <p class="institution">Université Saint Jean du Cameroun</p>
+                            <p>Spécialisation poussée en développement d'applications Web et Mobiles, structuration de
+                                bases de données, Design UI/UX et fondements en Intelligence Artificielle.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item card-3d" onclick="this.classList.toggle('expanded')">
+                    <div class="timeline-date">2022 - 2024</div>
+                    <div class="timeline-content">
+                        <h3><i class="fas fa-certificate"></i> Cycle Préparatoire Ingénieur Généraliste <i
+                                class="fas fa-chevron-down expand-icon"></i></h3>
+                        <div class="timeline-details">
+                            <p class="institution">Université Saint Jean du Cameroun</p>
+                            <p>Acquisition de bases solides en algorithmique, mathématiques appliquées et informatique
+                                générale.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item card-3d" onclick="this.classList.toggle('expanded')">
+                    <div class="timeline-date">2022</div>
+                    <div class="timeline-content">
+                        <h3><i class="fas fa-award"></i> Baccalauréat Scientifique D <i
+                                class="fas fa-chevron-down expand-icon"></i></h3>
+                        <div class="timeline-details">
+                            <p class="institution">Collège adventiste du Cameroun</p>
+                            <p>Obtention du baccalauréat scientifique avec mention.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="experience-section">
+            <h3>Expériences Professionnelles</h3>
+            <div class="experience-grid">
+                <div class="experience-card card-3d">
+                    <div class="exp-header">
+                        <h4>Développeuse Web & Mobile</h4>
+                        <span class="exp-date">2024 - En cours</span>
+                    </div>
+                    <p class="exp-company">Projets Personnels & Académiques</p>
+                    <p>Conception d'interfaces (Design System Figma) et implémentation :</p>
+                    <ul class="experience-list">
+                        <li><strong>ActforGood & Womencare :</strong> Développement d'apps mobiles (React Native).</li>
+                        <li><strong>Musicao & Portfolio :</strong> Création de sites web (Angular, HTML/CSS).</li>
+                        <li>Gestion autonome du cycle de vie des projets (de l'UX au déploiement).</li>
+                    </ul>
+                </div>
+
+                <div class="experience-card card-3d">
+                    <div class="exp-header">
+                        <h4>Vice-Présidente</h4>
+                        <span class="exp-date">En cours</span>
+                    </div>
+                    <p class="exp-company">IUSJC-PMI STUDENT CLUB</p>
+                    <p>Co-gestion et leadership du premier club étudiant PMI du Cameroun :</p>
+                    <ul class="experience-list">
+                        <li>Application pratique des méthodologies du Management de projet.</li>
+                        <li>Organisation d'activités pour les membres corporatifs et bénévoles.</li>
+                        <li>Volontariat actif au sein du réseau professionnel national PMI-Cameroun.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-card card-3d">
+                    <div class="exp-header">
+                        <h4>Stagiaire Mobile & AR</h4>
+                        <span class="exp-date">2024</span>
+                    </div>
+                    <p class="exp-company">HAKKILO XR (Startup)</p>
+                    <p>Immersion en startup spécialisée dans la Réalité Augmentée (AR) :</p>
+                    <ul class="experience-list">
+                        <li>Participation à la conception d'une application mobile innovante en AR.</li>
+                        <li>Analyse de marché, représentation lors de compétitions de pitchs.</li>
+                        <li>Développement d'un fort esprit d'entrepreneuriat technologique.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-card card-3d">
+                    <div class="exp-header">
+                        <h4>Stagiaire DSI</h4>
+                        <span class="exp-date">2023</span>
+                    </div>
+                    <p class="exp-company">Les Mutuelles Réunies</p>
+                    <p>Rôle transverse à la Direction des Systèmes Informatiques (DSI) :</p>
+                    <ul class="experience-list">
+                        <li><strong>Support technique :</strong> Maintenance préventive du parc informatique.</li>
+                        <li><strong>Transversal :</strong> Collaboration avec la Communication et l'Archivage pour la
+                            gestion documentaire et la prospection.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio">
+        <h2 class="section-title">Mes réalisations</h2>
+        <div class="section-separator">
+            <i class="fas fa-caret-down"></i>
+        </div>
+        <div class="portfolio-tabs">
+            <button class="tab-btn active" data-tab="all">Tous les projets</button>
+            <button class="tab-btn" data-tab="web">Développement Web</button>
+            <button class="tab-btn" data-tab="mobile">Applications Mobile</button>
+            <button class="tab-btn" data-tab="design">Design UI/UX</button>
+        </div>
+
+        <div class="portfolio-content">
+            <div class="tab-content active" id="all">
+                <div class="portfolio-grid">
+                    <!-- Portfolio -->
+                    <div class="project-card card-3d">
+                        <div class="project-img"
+                            style="background-image: url('assets/images/projects/portfolio.jpg'), url('https://placehold.co/600x400/4a90e2/white?text=Portfolio');">
+                        </div>
+                        <div class="project-info">
+                            <h3>Portfolio</h3>
+                            <div class="project-badges">
+                                <span class="badge">HTML</span>
+                                <span class="badge">CSS</span>
+                                <span class="badge">JavaScript</span>
+                                <span class="badge">PHP</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="projects/portfolio.html"><i class="fas fa-info-circle"></i> Détails du
+                                    projet</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Figma -->
+                    <div class="project-card card-3d">
+                        <div class="project-img"
+                            style="background-image: url('assets/images/projects/figma.jpg'), url('https://placehold.co/600x400/f5a623/white?text=Figma');">
+                        </div>
+                        <div class="project-info">
+                            <h3>Projets Figma</h3>
+                            <div class="project-badges">
+                                <span class="badge">Figma</span>
+                                <span class="badge">UI/UX</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="projects/figma.html"><i class="fas fa-info-circle"></i> Détails du projet</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Musicao -->
+                    <div class="project-card card-3d">
+                        <div class="project-img"
+                            style="background-image: url('assets/images/projects/musicao.jpg'), url('https://placehold.co/600x400/9b59b6/white?text=Musicao');">
+                        </div>
+                        <div class="project-info">
+                            <h3>Musicao</h3>
+                            <div class="project-badges">
+                                <span class="badge">HTML</span>
+                                <span class="badge">CSS</span>
+                                <span class="badge">JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="projects/musicao.html"><i class="fas fa-info-circle"></i> Détails du projet</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ProjetGame -->
+                    <div class="project-card card-3d">
+                        <div class="project-img"
+                            style="background-image: url('assets/images/projects/projetgame.jpg'), url('https://placehold.co/600x400/e74c3c/white?text=ProjetGame');">
+                        </div>
+                        <div class="project-info">
+                            <h3>ProjetGame</h3>
+                            <div class="project-badges">
+                                <span class="badge">Angular</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="projects/projetgame.html"><i class="fas fa-info-circle"></i> Détails du
+                                    projet</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Reçu -->
+                    <div class="project-card card-3d">
+                        <div class="project-img"
+                            style="background-image: url('assets/images/projects/recu.jpg'), url('https://placehold.co/600x400/3498db/white?text=Reçu');">
+                        </div>
+                        <div class="project-info">
+                            <h3>Reçu</h3>
+                            <div class="project-badges">
+                                <span class="badge">Angular</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="projects/recu.html"><i class="fas fa-info-circle"></i> Détails du projet</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ActforGood -->
+                    <div class="project-card card-3d">
+                        <div class="project-img"
+                            style="background-image: url('assets/images/projects/actforgood.jpg'), url('https://placehold.co/600x400/27ae60/white?text=ActforGood');">
+                        </div>
+                        <div class="project-info">
+                            <h3>ActforGood</h3>
+                            <div class="project-badges">
+                                <span class="badge">Angular</span>
+                                <span class="badge">React Native</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="projects/actforgood.html"><i class="fas fa-info-circle"></i> Détails du
+                                    projet</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Womencare -->
+                    <div class="project-card card-3d">
+                        <div class="project-img"
+                            style="background-image: url('assets/images/projects/womencare.jpg'), url('https://placehold.co/600x400/e91e63/white?text=Womencare');">
+                        </div>
+                        <div class="project-info">
+                            <h3>Womencare</h3>
+                            <div class="project-badges">
+                                <span class="badge">React Native</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="projects/womencare.html"><i class="fas fa-info-circle"></i> Détails du
+                                    projet</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Willbank -->
+                    <div class="project-card card-3d">
+                        <div class="project-img"
+                            style="background-image: url('assets/images/Img_willbank/Capture d’écran_31-3-2026_211143_localhost.jpeg'), url('https://placehold.co/600x400/2ecc71/white?text=Willbank');">
+                        </div>
+                        <div class="project-info">
+                            <h3>Willbank</h3>
+                            <div class="project-badges">
+                                <span class="badge">Microservices</span>
+                                <span class="badge">Spring Boot</span>
+                                <span class="badge">Angular</span>
+                                <span class="badge">React Native</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="projects/willbank.html"><i class="fas fa-info-circle"></i> Détails</a>
+                                <a href="https://gitlab.com/Maxwellmario123578/WillBank_Project" target="_blank"><i class="fab fa-gitlab"></i> GitLab</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="web">
+                <div class="portfolio-grid">
+                    <!-- Portfolio -->
+                    <div class="project-card card-3d">
+                        <div class="project-img"
+                            style="background-image: url('assets/images/projects/portfolio.jpg'), url('https://placehold.co/600x400/4a90e2/white?text=Portfolio');">
+                        </div>
+                        <div class="project-info">
+                            <h3>Portfolio</h3>
+                            <div class="project-badges">
+                                <span class="badge">HTML</span>
+                                <span class="badge">CSS</span>
+                                <span class="badge">JavaScript</span>
+                                <span class="badge">PHP</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="projects/portfolio.html"><i class="fas fa-info-circle"></i> Détails du
+                                    projet</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Musicao -->
+                    <div class="project-card card-3d">
+                        <div class="project-img"
+                            style="background-image: url('assets/images/projects/musicao.jpg'), url('https://placehold.co/600x400/9b59b6/white?text=Musicao');">
+                        </div>
+                        <div class="project-info">
+                            <h3>Musicao</h3>
+                            <div class="project-badges">
+                                <span class="badge">HTML</span>
+                                <span class="badge">CSS</span>
+                                <span class="badge">JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="projects/musicao.html"><i class="fas fa-info-circle"></i> Détails du projet</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ProjetGame -->
+                    <div class="project-card card-3d">
+                        <div class="project-img"
+                            style="background-image: url('assets/images/projects/projetgame.jpg'), url('https://placehold.co/600x400/e74c3c/white?text=ProjetGame');">
+                        </div>
+                        <div class="project-info">
+                            <h3>ProjetGame</h3>
+                            <div class="project-badges">
+                                <span class="badge">Angular</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="projects/projetgame.html"><i class="fas fa-info-circle"></i> Détails du
+                                    projet</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Reçu -->
+                    <div class="project-card card-3d">
+                        <div class="project-img"
+                            style="background-image: url('assets/images/projects/recu.jpg'), url('https://placehold.co/600x400/3498db/white?text=Reçu');">
+                        </div>
+                        <div class="project-info">
+                            <h3>Reçu</h3>
+                            <div class="project-badges">
+                                <span class="badge">Angular</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="projects/recu.html"><i class="fas fa-info-circle"></i> Détails du projet</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ActforGood -->
+                    <div class="project-card card-3d">
+                        <div class="project-img"
+                            style="background-image: url('assets/images/projects/actforgood.jpg'), url('https://placehold.co/600x400/27ae60/white?text=ActforGood');">
+                        </div>
+                        <div class="project-info">
+                            <h3>ActforGood</h3>
+                            <div class="project-badges">
+                                <span class="badge">Angular</span>
+                                <span class="badge">React Native</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="projects/actforgood.html"><i class="fas fa-info-circle"></i> Détails du
+                                    projet</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Willbank -->
+                    <div class="project-card card-3d">
+                        <div class="project-img"
+                            style="background-image: url('assets/images/Img_willbank/Capture d’écran_31-3-2026_211143_localhost.jpeg'), url('https://placehold.co/600x400/2ecc71/white?text=Willbank');">
+                        </div>
+                        <div class="project-info">
+                            <h3>Willbank</h3>
+                            <div class="project-badges">
+                                <span class="badge">Angular</span>
+                                <span class="badge">Microservices</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="projects/willbank.html"><i class="fas fa-info-circle"></i> Détails</a>
+                                <a href="https://gitlab.com/Maxwellmario123578/WillBank_Project" target="_blank"><i class="fab fa-gitlab"></i> GitLab</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="mobile">
+                <div class="portfolio-grid">
+                    <!-- ActforGood -->
+                    <div class="project-card card-3d">
+                        <div class="project-img"
+                            style="background-image: url('assets/images/projects/actforgood.jpg'), url('https://placehold.co/600x400/27ae60/white?text=ActforGood');">
+                        </div>
+                        <div class="project-info">
+                            <h3>ActforGood</h3>
+                            <div class="project-badges">
+                                <span class="badge">Angular</span>
+                                <span class="badge">React Native</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="projects/actforgood.html"><i class="fas fa-info-circle"></i> Détails du
+                                    projet</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Womencare -->
+                    <div class="project-card card-3d">
+                        <div class="project-img"
+                            style="background-image: url('assets/images/projects/womencare.jpg'), url('https://placehold.co/600x400/e91e63/white?text=Womencare');">
+                        </div>
+                        <div class="project-info">
+                            <h3>Womencare</h3>
+                            <div class="project-badges">
+                                <span class="badge">React Native</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="projects/womencare.html"><i class="fas fa-info-circle"></i> Détails du
+                                    projet</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Willbank -->
+                    <div class="project-card card-3d">
+                        <div class="project-img"
+                            style="background-image: url('assets/images/Img_willbank/WhatsApp Image 2026-03-31 at 21.38.16.jpeg'), url('https://placehold.co/600x400/2ecc71/white?text=Willbank+Mobile');">
+                        </div>
+                        <div class="project-info">
+                            <h3>Willbank</h3>
+                            <div class="project-badges">
+                                <span class="badge">React Native</span>
+                                <span class="badge">Microservices</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="projects/willbank.html"><i class="fas fa-info-circle"></i> Détails</a>
+                                <a href="https://gitlab.com/Maxwellmario123578/WillBank_Project" target="_blank"><i class="fab fa-gitlab"></i> GitLab</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="design">
+                <div class="portfolio-grid">
+                    <!-- Figma -->
+                    <div class="project-card card-3d">
+                        <div class="project-img"
+                            style="background-image: url('assets/images/projects/figma.jpg'), url('https://placehold.co/600x400/f5a623/white?text=Figma');">
+                        </div>
+                        <div class="project-info">
+                            <h3>Projets Figma</h3>
+                            <div class="project-badges">
+                                <span class="badge">Figma</span>
+                                <span class="badge">UI/UX</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="projects/figma.html"><i class="fas fa-info-circle"></i> Détails du projet</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2 class="section-title">Me contacter</h2>
+        <div class="section-separator">
+            <i class="fas fa-caret-down"></i>
+        </div>
+
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item card-3d">
+                    <i class="far fa-envelope"></i>
+                    <div>
+                        <h4>E-mail</h4>
+                        <p>luciennekoubissack@gmail.com</p>
+                        <p>sheispinked@gmail.com</p>
+                    </div>
+                </div>
+                <div class="contact-item card-3d">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <h4>Téléphone</h4>
+                        <p>655 346 979</p>
+                    </div>
+                </div>
+                <div class="contact-item card-3d">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Localisation</h4>
+                        <p>Emana, Yaoundé</p>
+                    </div>
+                </div>
+                <div class="contact-item card-3d">
+                    <i class="fas fa-share-alt"></i>
+                    <div>
+                        <h4>Réseaux sociaux</h4>
+                        <div class="social-links">
+                            <a href="#" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                            <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="#" target="_blank"><i class="fab fa-behance"></i> Behance</a>
+                            <a href="#" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-container">
+                <div class="contact-form card-3d">
+                    <h3>Envoyez-moi un message</h3>
+                    <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <div class="form-group">
+                            <label for="name">Nom complet *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Adresse e-mail *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="company">Entreprise / Organisation</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Sujet *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Sélectionnez un sujet</option>
+                                <option value="stage">Opportunité de stage</option>
+                                <option value="collaboration">Collaboration</option>
+                                <option value="freelance">Mission freelance</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required
+                                placeholder="Décrivez votre projet, vos besoins ou votre proposition..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-submit">
+                            <i class="fas fa-paper-plane"></i>
+                            Envoyer le message
+                        </button>
+                    </form>
+
+                    <div id="form-status" class="form-status"></div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="copyright">© 2025 Koubissack Baseteck Colette Lucienne - Portfolio étudiant</div>
+        <div class="back-to-top" onclick="scrollToTop()">
+            RETOUR EN HAUT <i class="fas fa-chevron-up"></i>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

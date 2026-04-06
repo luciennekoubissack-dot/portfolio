@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WillBank - Projet</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="project-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="project-nav">
+        <a href="../index.html#portfolio" class="back-btn"><i class="fas fa-arrow-left"></i> Retour au portfolio</a>
+        <div class="theme-toggle" onclick="toggleTheme()" style="cursor: pointer;">
+            <i class="fas fa-moon"></i>
+        </div>
+    </nav>
+
+    <header class="hero-project">
+        <div class="hero-bg">
+            <img src="../assets/images/Img_willbank/Capture d’écran_31-3-2026_211143_localhost.jpeg" alt="WillBank Hero" onerror="this.src='https://placehold.co/1920x1080/2ecc71/ffffff?text=WillBank+Microservices'">
+        </div>
+        <div class="hero-content reveal-hidden">
+            <h1>WillBank</h1>
+            <div class="project-badges">
+                <span class="badge">Microservices</span>
+                <span class="badge">Spring Boot 3.2</span>
+                <span class="badge">Angular</span>
+                <span class="badge">React Native</span>
+                <span class="badge">RabbitMQ</span>
+            </div>
+            <a href="https://gitlab.com/Maxwellmario123578/WillBank_Project" class="hero-git-btn reveal-hidden" target="_blank">
+                <i class="fab fa-gitlab"></i> Voir le code source
+            </a>
+        </div>
+    </header>
+
+    <div class="project-detail">
+        <div class="project-content-card reveal-hidden">
+            <div class="project-section">
+                <h2><i class="fas fa-info-circle"></i> Description du Projet</h2>
+                <p>WillBank est une application bancaire complète développée dans le cadre d'un projet académique. Le projet repose sur une <strong>architecture microservices moderne</strong> composée de 8 services indépendants, garantissant une scalabilité et une maintenance optimale.</p>
+                <p style="margin-top: 15px;">L'écosystème comprend Eureka Server (registre), API Gateway, Client Service, Compte Service, Transaction Service, Notification Service, Email Service et un Composite Service pour l'agrégation de données.</p>
+            </div>
+
+            <div class="project-section">
+                <h2><i class="fas fa-layer-group"></i> Architecture Technique</h2>
+                <ul>
+                    <li><strong>Backend :</strong> Java 17, Spring Boot 3.2, Spring Cloud 2023</li>
+                    <li><strong>Communication :</strong> OpenFeign (synchrone) & RabbitMQ (asynchrone)</li>
+                    <li><strong>Base de données :</strong> MySQL (une base par microservice)</li>
+                    <li><strong>Sécurité :</strong> Authentification JWT centralisée au niveau du Gateway</li>
+                    <li><strong>Frontend Web :</strong> Angular (Interface Administration)</li>
+                    <li><strong>Frontend Mobile :</strong> React Native / Expo (Interface Client)</li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h2><i class="fas fa-star"></i> Points Forts & Innovations</h2>
+                <ul>
+                    <li><strong>Event-Driven Architecture :</strong> Gestion des événements en temps réel via RabbitMQ (Topic & Direct)</li>
+                    <li><strong>Notifications Omnicanales :</strong> Emails HTML via SMTP Gmail et Push Notifications Firebase</li>
+                    <li><strong>Service Composite :</strong> Agrégation de données pour Dashboards et relevés unifiés</li>
+                    <li><strong>DevOps :</strong> Pipeline CI/CD configuré via GitLab CI</li>
+                    <li><strong>UI/UX :</strong> Deux interfaces distinctes pour admin et clients finaux</li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h2><i class="fas fa-images"></i> Galerie du Projet</h2>
+                <div class="project-gallery">
+                    <div class="gallery-item reveal-hidden">
+                        <img src="../assets/images/Img_willbank/Capture d’écran_31-3-2026_211143_localhost.jpeg" alt="WillBank Preview 1">
+                    </div>
+                    <div class="gallery-item reveal-hidden">
+                        <img src="../assets/images/Img_willbank/Capture d’écran_31-3-2026_211219_localhost.jpeg" alt="WillBank Preview 2">
+                    </div>
+                    <div class="gallery-item reveal-hidden">
+                        <img src="../assets/images/Img_willbank/Capture d’écran_31-3-2026_211230_localhost.jpeg" alt="WillBank Preview 3">
+                    </div>
+                    <div class="gallery-item reveal-hidden">
+                        <img src="../assets/images/Img_willbank/Capture d’écran_31-3-2026_21135_localhost.jpeg" alt="WillBank Preview 4">
+                    </div>
+                    <div class="gallery-item reveal-hidden">
+                        <img src="../assets/images/Img_willbank/WhatsApp Image 2026-03-31 at 21.38.14.jpeg" alt="WillBank Mobile 1">
+                    </div>
+                    <div class="gallery-item reveal-hidden">
+                        <img src="../assets/images/Img_willbank/WhatsApp Image 2026-03-31 at 21.38.16 (1).jpeg" alt="WillBank Mobile 2">
+                    </div>
+                    <div class="gallery-item reveal-hidden">
+                        <img src="../assets/images/Img_willbank/WhatsApp Image 2026-03-31 at 21.38.16.jpeg" alt="WillBank Mobile 3">
+                    </div>
+                    <div class="gallery-item reveal-hidden">
+                        <img src="../assets/images/Img_willbank/WhatsApp Image 2026-03-31 at 21.38.17.jpeg" alt="WillBank Mobile 4">
+                    </div>
+                    <div class="gallery-item reveal-hidden">
+                        <img src="../assets/images/Img_willbank/WhatsApp Image 2026-03-31 at 21.38.18 (1).jpeg" alt="WillBank Mobile 5">
+                    </div>
+                    <div class="gallery-item reveal-hidden">
+                        <img src="../assets/images/Img_willbank/WhatsApp Image 2026-03-31 at 21.38.18.jpeg" alt="WillBank Mobile 6">
+                    </div>
+                    <div class="gallery-item reveal-hidden">
+                        <img src="../assets/images/Img_willbank/WhatsApp Image 2026-03-31 at 21.38.19 (1).jpeg" alt="WillBank Mobile 7">
+                    </div>
+                    <div class="gallery-item reveal-hidden">
+                        <img src="../assets/images/Img_willbank/WhatsApp Image 2026-03-31 at 21.38.19.jpeg" alt="WillBank Mobile 8">
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-section">
+                <h2><i class="fas fa-link"></i> Liens & Dépôts</h2>
+                <div class="project-actions">
+                    <a href="https://gitlab.com/Maxwellmario123578/WillBank_Project" class="btn-project btn-main" target="_blank">
+                        <i class="fab fa-gitlab"></i> Voir sur GitLab
+                    </a>
+                    <a href="#" class="btn-project btn-outline" target="_blank">
+                        <i class="fas fa-file-pdf"></i> Documentation Technique
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <footer class="project-footer">
+            <div class="copyright">© 2025 Koubissack Baseteck Colette Lucienne</div>
+        </footer>
+    </div>
+
+    <script src="project-script.js"></script>
+    <script>
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('portfolio-theme', newTheme);
+            const icon = document.querySelector('.theme-toggle i');
+            icon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+        }
+    </script>
+</body>
+</html>

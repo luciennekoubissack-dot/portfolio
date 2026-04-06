@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musicao - Projet</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="project-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="project-nav">
+        <a href="../index.html#portfolio" class="back-btn"><i class="fas fa-arrow-left"></i> Retour au portfolio</a>
+        <div class="theme-toggle" onclick="toggleTheme()" style="cursor: pointer;">
+            <i class="fas fa-moon"></i>
+        </div>
+    </nav>
+
+    <header class="hero-project">
+        <div class="hero-bg">
+            <img src="../assets/images/projects/musicao.jpg" alt="Musicao Hero" onerror="this.src='https://placehold.co/1920x1080/9b59b6/ffffff?text=Musicao+Streaming'">
+        </div>
+        <div class="hero-content reveal-hidden">
+            <h1>Musicao</h1>
+            <div class="project-badges">
+                <span class="badge">HTML</span>
+                <span class="badge">CSS</span>
+                <span class="badge">JavaScript</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="project-detail">
+        <div class="project-content-card reveal-hidden">
+            <div class="project-section">
+                <h2><i class="fas fa-info-circle"></i> Description</h2>
+                <p>Application web de streaming musical permettant aux utilisateurs de découvrir, écouter et gérer leurs playlists favorites. Interface intuitive et moderne avec lecteur audio intégré.</p>
+            </div>
+
+            <div class="project-section">
+                <h2><i class="fas fa-bullseye"></i> Objectifs</h2>
+                <ul>
+                    <li>Plateforme de streaming accessible</li>
+                    <li>Lecteur audio personnalisé</li>
+                    <li>Gestion de playlists</li>
+                    <li>Expérience utilisateur fluide</li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h2><i class="fas fa-graduation-cap"></i> Expérience acquise</h2>
+                <ul>
+                    <li>API Web Audio</li>
+                    <li>Événements JS avancés</li>
+                    <li>Interfaces interactives</li>
+                    <li>LocalStorage</li>
+                    <li>Animations CSS</li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h2><i class="fas fa-images"></i> Aperçu</h2>
+                <div class="project-gallery">
+                    <div class="gallery-item reveal-hidden">
+                        <img src="../assets/images/projects/musicao-preview.jpg" alt="Aperçu de Musicao" onerror="this.src='https://placehold.co/800x500/9b59b6/white?text=Interface+Musicao'">
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-section">
+                <h2><i class="fas fa-link"></i> Liens & Actions</h2>
+                <div class="project-actions">
+                    <a href="#" class="btn-project btn-main" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Voir l'application
+                    </a>
+                    <a href="#" class="btn-project btn-outline" target="_blank">
+                        <i class="fab fa-github"></i> Code source
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <footer class="project-footer">
+            <div class="copyright">© 2025 Koubissack Baseteck Colette Lucienne</div>
+        </footer>
+    </div>
+
+    <script src="project-script.js"></script>
+    <script>
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('portfolio-theme', newTheme);
+            const icon = document.querySelector('.theme-toggle i');
+            icon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+        }
+    </script>
+</body>
+</html>

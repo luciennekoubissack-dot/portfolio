@@ -1,0 +1,17 @@
+IMAGES TEMPORAIRES - À REMPLACER
+
+Le portfolio utilise un système de fallback intelligent :
+- Si votre vraie image existe → elle s'affiche
+- Si elle n'existe pas → une image placeholder s'affiche
+
+Images à ajouter :
+✅ profile.jpg (votre photo de profil)
+✅ about-photo.jpg (photo pour la section à propos)
+✅ projects/projet-web-1.jpg
+✅ projects/projet-web-2.jpg  
+✅ projects/design-mobile.jpg
+✅ projects/design-web.jpg
+✅ projects/photo-serie.jpg
+✅ projects/video-motion.jpg
+
+Le site fonctionne parfaitement même sans ces images grâce aux placeholders automatiques !
