@@ -18,6 +18,16 @@
 
 <body>
 
+    <!-- Loader -->
+    <div id="loader">
+        <div class="loader-initials">KBCL</div>
+        <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+    </div>
+
+    <!-- Curseur custom -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
     <!-- Header / Hero -->
     <header id="home">
         <nav>
@@ -36,10 +46,22 @@
             </button>
         </nav>
         <canvas id="particle-canvas"></canvas>
+
         <div class="hero-content centered-hero">
-            <h1 class="hero-name">KOUBISSACK BASETECK<br>Colette Lucienne</h1>
-            <p class="hero-role">Développeur Logiciel</p>
+            <div class="hero-photo-wrap">
+                <img src="assets/images/Photocv.jpg" alt="Colette Lucienne" class="hero-photo">
+                <div class="hero-photo-ring"></div>
+            </div>
+            <p class="hero-greeting">Bonjour, je suis</p>
+            <h1 class="hero-name">Colette Lucienne</h1>
+            <p class="hero-role"><span id="typed-role"></span><span class="typed-cursor">|</span></p>
+            <p class="hero-tagline">Développeuse · Designer UI/UX · Cameroun</p>
+            <div class="hero-cta">
+                <a href="#portfolio" class="btn btn-primary hero-btn">Voir mes projets</a>
+                <a href="#contact" class="btn btn-outline hero-btn">Me contacter</a>
+            </div>
         </div>
+
         <a href="#about" class="scroll-indicator"><i class="fas fa-chevron-down"></i></a>
     </header>
 
@@ -84,45 +106,103 @@
         </div>
     </section>
 
+    <!-- Stats -->
+    <section class="stats-section" id="stats">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <span class="stat-number" data-target="9">0</span>
+                <span class="stat-label">Projets réalisés</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="2">0</span>
+                <span class="stat-label">Stages effectués</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="3">0</span>
+                <span class="stat-label">Années de formation</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="1">0</span>
+                <span class="stat-label">Site client en ligne</span>
+            </div>
+        </div>
+    </section>
+
     <!-- Skills -->
     <section id="skills">
         <h2 class="section-title">Mes compétences</h2>
-        <div class="section-separator">
-            <i class="fas fa-caret-down"></i>
-        </div>
+        <div class="section-separator"><i class="fas fa-caret-down"></i></div>
         <div class="skills-categories">
+
             <div class="skill-category">
-                <h3><i class="fas fa-code"></i> Développement </h3>
-                <div class="skills-container">
-                    <div class="skill-circle card-3d">HTML/CSS/JavaScript</div>
-                    <div class="skill-circle card-3d">React-Native</div>
-                    <div class="skill-circle card-3d">Angular</div>
-                    <div class="skill-circle card-3d">MySQL/PostgreSQL</div>
-                    <div class="skill-circle card-3d">Docker</div>
-                    <div class="skill-circle card-3d">WordPress</div>
-                    <div class="skill-circle card-3d">Linux</div>
+                <h3><i class="fas fa-code"></i> Développement</h3>
+                <div class="skills-tech-grid">
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-header"><span class="skill-bar-name">HTML / CSS</span><span class="skill-bar-level">Avancé</span></div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-header"><span class="skill-bar-name">JavaScript</span><span class="skill-bar-level">Intermédiaire</span></div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-header"><span class="skill-bar-name">Angular</span><span class="skill-bar-level">Intermédiaire</span></div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-header"><span class="skill-bar-name">React Native</span><span class="skill-bar-level">Intermédiaire</span></div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="68"></div></div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-header"><span class="skill-bar-name">Node.js</span><span class="skill-bar-level">Débutant</span></div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="45"></div></div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-header"><span class="skill-bar-name">MySQL / PostgreSQL</span><span class="skill-bar-level">Intermédiaire</span></div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="65"></div></div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-header"><span class="skill-bar-name">Docker</span><span class="skill-bar-level">Débutant</span></div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="40"></div></div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-header"><span class="skill-bar-name">WordPress</span><span class="skill-bar-level">Avancé</span></div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+                    </div>
                 </div>
             </div>
 
             <div class="skill-category">
                 <h3><i class="fas fa-palette"></i> Design UI/UX</h3>
-                <div class="skills-container">
-                    <div class="skill-circle card-3d">UI/UX</div>
-                    <div class="skill-circle card-3d">Figma</div>
-                    <div class="skill-circle card-3d">Adobe XD</div>
-                    <div class="skill-circle card-3d">Prototyping</div>
-                    <div class="skill-circle card-3d">Wireframing</div>
+                <div class="skills-tech-grid">
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-header"><span class="skill-bar-name">Figma</span><span class="skill-bar-level">Avancé</span></div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-header"><span class="skill-bar-name">Adobe XD</span><span class="skill-bar-level">Intermédiaire</span></div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="65"></div></div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-header"><span class="skill-bar-name">Prototyping</span><span class="skill-bar-level">Avancé</span></div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-header"><span class="skill-bar-name">Design System</span><span class="skill-bar-level">Intermédiaire</span></div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div>
+                    </div>
                 </div>
             </div>
 
             <div class="skill-category">
                 <h3><i class="fas fa-globe"></i> Langues</h3>
                 <div class="skills-container">
-                    <div class="skill-circle card-3d">Français<br></div>
-                    <div class="skill-circle card-3d">Anglais<br></div>
-                    <div class="skill-circle card-3d">Allemand<br></div>
+                    <span class="skill-pill">🇫🇷 Français — Natif</span>
+                    <span class="skill-pill">🇬🇧 Anglais — Intermédiaire</span>
+                    <span class="skill-pill">🇩🇪 Allemand — Notions</span>
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -240,15 +320,147 @@
     <!-- Portfolio -->
     <section id="portfolio">
         <h2 class="section-title">Mes réalisations</h2>
-        <div class="section-separator">
-            <i class="fas fa-caret-down"></i>
+        <div class="section-separator"><i class="fas fa-caret-down"></i></div>
+
+        <div class="portfolio-filters">
+            <button class="filter-btn active" data-filter="all">Tous</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn" data-filter="mobile">Mobile</button>
+            <button class="filter-btn" data-filter="design">Design</button>
         </div>
-        <div class="portfolio-tabs">
-            <button class="tab-btn active" data-tab="all">Tous les projets</button>
-            <button class="tab-btn" data-tab="web">Développement Web</button>
-            <button class="tab-btn" data-tab="mobile">Applications Mobile</button>
-            <button class="tab-btn" data-tab="design">Design UI/UX</button>
+
+        <div class="portfolio-grid" id="portfolioGrid">
+
+            <div class="project-card card-3d" data-category="web">
+                <div class="project-img" style="background-image: url('assets/images/projects/kbgroup.jpg'), url('https://placehold.co/600x400/1a1a2e/white?text=K%26B+Group+Sarl');"></div>
+                <div class="project-info">
+                    <span class="project-tag">Client · En ligne</span>
+                    <h3>K&amp;B Group Sarl</h3>
+                    <div class="project-badges">
+                        <span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="projects/kbgroup.html"><i class="fas fa-info-circle"></i> Détails</a>
+                        <a href="https://www.kbgroupesarl.com" target="_blank"><i class="fas fa-external-link-alt"></i> Voir le site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card card-3d" data-category="web mobile">
+                <div class="project-img" style="background-image: url('assets/images/projects/willbank.jpg'), url('https://placehold.co/600x400/2ecc71/white?text=Willbank');"></div>
+                <div class="project-info">
+                    <span class="project-tag">Académique</span>
+                    <h3>Willbank</h3>
+                    <div class="project-badges">
+                        <span class="badge">Angular</span><span class="badge">React Native</span><span class="badge">Spring Boot</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="projects/willbank.html"><i class="fas fa-info-circle"></i> Détails</a>
+                        <a href="https://gitlab.com/Maxwellmario123578/WillBank_Project" target="_blank"><i class="fab fa-gitlab"></i> GitLab</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card card-3d" data-category="mobile">
+                <div class="project-img" style="background-image: url('assets/images/projects/actforgood.jpg'), url('https://placehold.co/600x400/27ae60/white?text=ActforGood');"></div>
+                <div class="project-info">
+                    <span class="project-tag">Personnel</span>
+                    <h3>ActforGood</h3>
+                    <div class="project-badges">
+                        <span class="badge">Angular</span><span class="badge">React Native</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="projects/actforgood.html"><i class="fas fa-info-circle"></i> Détails</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card card-3d" data-category="mobile">
+                <div class="project-img" style="background-image: url('assets/images/projects/womencare.jpg'), url('https://placehold.co/600x400/e91e63/white?text=Womencare');"></div>
+                <div class="project-info">
+                    <span class="project-tag">Personnel</span>
+                    <h3>Womencare</h3>
+                    <div class="project-badges">
+                        <span class="badge">React Native</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="projects/womencare.html"><i class="fas fa-info-circle"></i> Détails</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card card-3d" data-category="web">
+                <div class="project-img" style="background-image: url('assets/images/projects/musicao.jpg'), url('https://placehold.co/600x400/9b59b6/white?text=Musicao');"></div>
+                <div class="project-info">
+                    <span class="project-tag">Personnel</span>
+                    <h3>Musicao</h3>
+                    <div class="project-badges">
+                        <span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="projects/musicao.html"><i class="fas fa-info-circle"></i> Détails</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card card-3d" data-category="web">
+                <div class="project-img" style="background-image: url('assets/images/projects/projetgame.jpg'), url('https://placehold.co/600x400/e74c3c/white?text=ProjetGame');"></div>
+                <div class="project-info">
+                    <span class="project-tag">Académique</span>
+                    <h3>ProjetGame</h3>
+                    <div class="project-badges">
+                        <span class="badge">Angular</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="projects/projetgame.html"><i class="fas fa-info-circle"></i> Détails</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card card-3d" data-category="web">
+                <div class="project-img" style="background-image: url('assets/images/projects/recu.jpg'), url('https://placehold.co/600x400/3498db/white?text=Reçu');"></div>
+                <div class="project-info">
+                    <span class="project-tag">Académique</span>
+                    <h3>Reçu</h3>
+                    <div class="project-badges">
+                        <span class="badge">Angular</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="projects/recu.html"><i class="fas fa-info-circle"></i> Détails</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card card-3d" data-category="design">
+                <div class="project-img" style="background-image: url('assets/images/projects/figma.jpg'), url('https://placehold.co/600x400/f5a623/white?text=Figma');"></div>
+                <div class="project-info">
+                    <span class="project-tag">Design</span>
+                    <h3>Projets Figma</h3>
+                    <div class="project-badges">
+                        <span class="badge">Figma</span><span class="badge">UI/UX</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="projects/figma.html"><i class="fas fa-info-circle"></i> Détails</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card card-3d" data-category="web">
+                <div class="project-img" style="background-image: url('assets/images/projects/portfolio.jpg'), url('https://placehold.co/600x400/4a90e2/white?text=Portfolio');"></div>
+                <div class="project-info">
+                    <span class="project-tag">Personnel</span>
+                    <h3>Portfolio</h3>
+                    <div class="project-badges">
+                        <span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">JavaScript</span><span class="badge">PHP</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="projects/portfolio.html"><i class="fas fa-info-circle"></i> Détails</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
+    </section>
 
         <div class="portfolio-content">
             <div class="tab-content active" id="all">
@@ -604,29 +816,6 @@
                 </div>
             </div>
 
-            <div class="tab-content" id="design">
-                <div class="portfolio-grid">
-                    <!-- Figma -->
-                    <div class="project-card card-3d">
-                        <div class="project-img"
-                            style="background-image: url('assets/images/projects/figma.jpg'), url('https://placehold.co/600x400/f5a623/white?text=Figma');">
-                        </div>
-                        <div class="project-info">
-                            <h3>Projets Figma</h3>
-                            <div class="project-badges">
-                                <span class="badge">Figma</span>
-                                <span class="badge">UI/UX</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="projects/figma.html"><i class="fas fa-info-circle"></i> Détails du projet</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Contact -->
     <section id="contact">
         <h2 class="section-title">Me contacter</h2>
@@ -722,9 +911,29 @@
 
     <!-- Footer -->
     <footer>
-        <div class="copyright">© 2025 Koubissack Baseteck Colette Lucienne - Portfolio étudiant</div>
-        <div class="back-to-top" onclick="scrollToTop()">
-            RETOUR EN HAUT <i class="fas fa-chevron-up"></i>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <span class="footer-logo">KBCL</span>
+                <p>Développeuse Frontend &amp; Designer UI/UX</p>
+            </div>
+            <div class="footer-links">
+                <a href="#about">À propos</a>
+                <a href="#skills">Compétences</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:luciennekoubissack@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2025 Koubissack Baseteck Colette Lucienne</span>
+            <button class="back-to-top" onclick="scrollToTop()" aria-label="Retour en haut">
+                <i class="fas fa-chevron-up"></i>
+            </button>
         </div>
     </footer>
 
