@@ -1207,7 +1207,9 @@ footer {
     color: var(--white);
 }
 
-/* Responsive */
+.hamburger {
+    display: none; /* caché par défaut sur desktop */
+}
 @media (max-width: 1024px) {
     .contact-container {
         grid-template-columns: 1fr;
@@ -1220,42 +1222,93 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 1.8rem;
+
+    /* Nav mobile */
+    nav {
+        padding: 12px 20px;
+        justify-content: space-between;
     }
 
-    .hero-content p {
+    .nav-logo {
+        position: static;
+        font-size: 1.4rem;
+    }
+
+    .theme-btn {
+        position: static;
+        order: 3;
+    }
+
+    .nav-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: var(--bg-color);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        z-index: 200;
+        transition: opacity 0.3s ease;
+    }
+
+    .nav-menu.open {
+        display: flex;
+    }
+
+    .nav-menu a {
         font-size: 1.2rem;
     }
 
-    .hero-subtitle {
-        font-size: 1rem !important;
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 300;
+        order: 2;
     }
 
-    .profile-img {
-        width: 120px;
-        height: 120px;
+    .hamburger span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: var(--text-color);
+        border-radius: 2px;
+        transition: all 0.3s ease;
     }
 
-    nav {
-        justify-content: center;
-        padding: 15px 20px;
+    .hamburger.open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
     }
 
-    nav ul {
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
+    .hamburger.open span:nth-child(2) {
+        opacity: 0;
     }
 
-    nav a {
-        font-size: 0.8rem;
+    .hamburger.open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
     }
 
+    /* Hero */
+    .hero-role {
+        font-size: 0.75rem;
+        letter-spacing: 4px;
+        padding: 8px 15px;
+    }
+
+    /* Sections */
     section {
         padding: 60px 15px;
     }
 
+    /* About */
     .about-profile {
         grid-template-columns: 1fr;
         gap: 30px;
@@ -1267,55 +1320,78 @@ footer {
     }
 
     .characteristics {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 
+    /* Timeline */
     .timeline {
-        padding-left: 20px;
+        padding-left: 15px;
     }
 
     .timeline-item {
-        margin-left: 20px;
+        margin-left: 15px;
+        padding: 20px;
     }
 
     .timeline-item::before {
-        left: -35px;
+        left: -30px;
     }
 
-    .experience-grid {
-        grid-template-columns: 1fr;
+    .timeline-content h3 {
+        font-size: 1.1rem;
+        flex-wrap: wrap;
+        gap: 6px;
     }
 
+    /* Experience */
+    .experience-card {
+        min-width: 280px;
+        max-width: 280px;
+        padding: 25px;
+    }
+
+    .exp-header h4 {
+        font-size: 1.1rem;
+    }
+
+    /* Skills */
     .skills-container {
-        gap: 15px;
+        gap: 12px;
     }
 
     .skill-circle {
         width: 80px;
         height: 80px;
-        font-size: 0.7rem;
+        font-size: 0.65rem;
+    }
+
+    /* Portfolio */
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
     }
 
     .portfolio-tabs {
-        gap: 10px;
+        gap: 8px;
     }
 
     .tab-btn {
-        padding: 10px 20px;
-        font-size: 0.9rem;
+        padding: 9px 16px;
+        font-size: 0.8rem;
     }
 
+    /* Contact */
     .contact-container {
         grid-template-columns: 1fr;
         gap: 30px;
     }
 
     .contact-form {
-        padding: 30px 25px;
+        padding: 25px 20px;
     }
 
     .contact-cta {
-        padding: 40px 25px;
+        padding: 35px 20px;
     }
 
     .cta-buttons {
@@ -1324,10 +1400,12 @@ footer {
     }
 
     .cta-buttons .btn {
-        min-width: 200px;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
     }
 
-    /* Disable 3D effects on mobile for performance */
+    /* Disable heavy 3D on mobile */
     .card-3d:hover {
         transform: translateY(-5px);
     }
@@ -1336,9 +1414,101 @@ footer {
         animation: none;
     }
 
+    .experience-grid:hover .experience-card {
+        opacity: 1;
+        filter: none;
+    }
+
+    /* Footer */
     footer {
         flex-direction: column;
         gap: 10px;
         padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Hero */
+    .hero-name {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+
+    .hero-role {
+        font-size: 0.65rem;
+        letter-spacing: 3px;
+    }
+
+    /* Characteristics 1 colonne */
+    .characteristics {
+        grid-template-columns: 1fr;
+    }
+
+    /* Skills encore plus petits */
+    .skill-circle {
+        width: 68px;
+        height: 68px;
+        font-size: 0.6rem;
+    }
+
+    .skills-container {
+        gap: 10px;
+    }
+
+    /* Timeline simplifié */
+    .timeline {
+        padding-left: 10px;
+    }
+
+    .timeline-item {
+        margin-left: 10px;
+        padding: 15px;
+    }
+
+    .timeline-item::before {
+        left: -24px;
+        width: 10px;
+        height: 10px;
+    }
+
+    /* Experience cards pleine largeur */
+    .experience-card {
+        min-width: 240px;
+        max-width: 240px;
+        padding: 20px;
+    }
+
+    /* Tabs empilés */
+    .portfolio-tabs {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .tab-btn {
+        width: 80%;
+    }
+
+    /* Contact form padding réduit */
+    .contact-form {
+        padding: 20px 15px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+
+    /* Section title plus petit */
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    /* About photo centrée */
+    .about-img {
+        max-width: 200px;
     }
 }
