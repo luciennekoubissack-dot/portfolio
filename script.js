@@ -12,43 +12,59 @@ window.addEventListener('load', () => {
 });
 
 /* ── Cursor custom ── */
-(function initCursor() {
+function initCursor() {
     const dot  = document.getElementById('cursorDot');
     const ring = document.getElementById('cursorRing');
     if (!dot || !ring) return;
 
-    // Hide on touch devices
-    if (window.matchMedia('(hover: none)').matches) {
-        dot.style.display = 'none';
+    // Désactivé sur appareils tactiles
+    if (window.matchMedia('(hover: none), (pointer: coarse)').matches) {
+        dot.style.display  = 'none';
         ring.style.display = 'none';
-        document.body.style.cursor = 'auto';
-        document.querySelectorAll('*').forEach(el => el.style.cursor = '');
         return;
     }
 
     let mouseX = 0, mouseY = 0;
     let ringX = 0, ringY = 0;
+    let moved = false;
 
     document.addEventListener('mousemove', e => {
         mouseX = e.clientX;
         mouseY = e.clientY;
-        dot.style.left  = mouseX + 'px';
-        dot.style.top   = mouseY + 'px';
+        dot.style.left = mouseX + 'px';
+        dot.style.top  = mouseY + 'px';
+        if (!moved) {
+            moved = true;
+            dot.classList.add('visible');
+            ring.classList.add('visible');
+        }
     });
 
     (function animateRing() {
-        ringX += (mouseX - ringX) * 0.12;
-        ringY += (mouseY - ringY) * 0.12;
+        ringX += (mouseX - ringX) * 0.14;
+        ringY += (mouseY - ringY) * 0.14;
         ring.style.left = ringX + 'px';
         ring.style.top  = ringY + 'px';
         requestAnimationFrame(animateRing);
     })();
 
-    document.querySelectorAll('a, button, .project-card, .filter-btn, .skill-bar-item, .stat-item').forEach(el => {
+    const hoverTargets = 'a, button, .project-card, .filter-btn, .skill-bar-item, .stat-item, .char-item, input, textarea, select';
+    document.querySelectorAll(hoverTargets).forEach(el => {
         el.addEventListener('mouseenter', () => ring.classList.add('hovering'));
         el.addEventListener('mouseleave', () => ring.classList.remove('hovering'));
     });
-})();
+
+    document.addEventListener('mouseleave', () => {
+        dot.classList.remove('visible');
+        ring.classList.remove('visible');
+    });
+    document.addEventListener('mouseenter', () => {
+        if (moved) {
+            dot.classList.add('visible');
+            ring.classList.add('visible');
+        }
+    });
+}
 
 /* ── Typed text ── */
 (function initTyped() {
@@ -111,6 +127,9 @@ const io = new IntersectionObserver((entries) => {
 
 /* ── DOMContentLoaded ── */
 document.addEventListener('DOMContentLoaded', () => {
+
+    /* Curseur */
+    initCursor();
 
     /* Smooth scroll */
     document.querySelectorAll('a[href^="#"]').forEach(a => {
