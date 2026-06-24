@@ -354,3 +354,11 @@ body {
         justify-content: center;
     }
 }
+
+.project-subtitle {
+    color: #888;
+    font-size: 1rem;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}

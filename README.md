@@ -108,5 +108,3 @@ Le portfolio est entièrement responsive avec :
 Pour toute question ou personnalisation, n'hésitez pas à me contacter !
 
 ---
-
-**Bonne chance pour votre recherche de stage ! 🎯**

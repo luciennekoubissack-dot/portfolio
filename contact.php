@@ -1,7 +1,7 @@
 <?php
 // Configuration
-$to_email = "votre.email@exemple.com"; // Remplacez par votre vraie adresse email
-$subject_prefix = "[Portfolio Contact] ";
+$to_email = "luciennekoubissack.com"; 
+$subject_prefix = "Portfolio de Lucienne ";
 
 // Headers pour éviter les spams
 $headers = array(
@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $email_body = "
         <html>
         <head>
-            <title>Nouveau message depuis le portfolio</title>
+            <title>Nouveau message depuis votre site portfolio </title>
         </head>
         <body>
             <h2>Nouveau message de contact</h2>
