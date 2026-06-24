@@ -277,9 +277,6 @@ function initParticles() {
     const canvas = document.getElementById('particle-canvas');
     if (!canvas) return;
 
-    // Désactiver sur mobile pour les performances
-    if (window.innerWidth < 768) return;
-
     const ctx = canvas.getContext('2d');
     let w, h, particles = [];
     const mouse = { x: null, y: null, radius: 130 };
@@ -288,11 +285,10 @@ function initParticles() {
     window.addEventListener('mouseout',  () => { mouse.x = null; mouse.y = null; });
     window.addEventListener('scroll',    () => { mouse.x = null; mouse.y = null; });
 
-    // Debounce resize pour éviter les recréations en boucle
     let resizeTimer;
     window.addEventListener('resize', () => {
         clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(resize, 200);
+        resizeTimer = setTimeout(resize, 150);
     });
 
     class P {
@@ -304,8 +300,10 @@ function initParticles() {
             this.sp = (Math.random() * 0.015) - 0.0075;
         }
         draw() {
-            ctx.beginPath(); ctx.arc(this.x, this.y, this.sz, 0, Math.PI * 2);
-            ctx.fillStyle = this.color; ctx.fill();
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.sz, 0, Math.PI * 2);
+            ctx.fillStyle = this.color;
+            ctx.fill();
         }
         update() {
             this.a += this.sp;
@@ -327,20 +325,18 @@ function initParticles() {
     }
 
     function resize() {
-        w = canvas.width  = canvas.offsetWidth;
-        h = canvas.height = canvas.offsetHeight;
+        w = canvas.width  = window.innerWidth;
+        h = canvas.height = window.innerHeight;
         particles = [];
 
         const colors = ['#5C9E66', '#A5D2A8', '#3d7a47', '#74b87d', '#c5e8c7'];
-        // Nombre de particules proportionnel à la surface, plafonné
-        const count = Math.min(220, Math.floor((w * h) / 6000));
+        // Nombre réduit sur mobile pour les perfs
+        const count = w < 768 ? 80 : 220;
 
         for (let i = 0; i < count; i++) {
-            // Distribution aléatoire sur toute la surface visible
-            const x = Math.random() * w;
-            const y = Math.random() * h;
             particles.push(new P(
-                x, y,
+                Math.random() * w,
+                Math.random() * h,
                 Math.random() * 2.5 + 0.5,
                 colors[Math.floor(Math.random() * colors.length)]
             ));
@@ -353,8 +349,8 @@ function initParticles() {
         ctx.fillStyle = dark ? 'rgba(13,13,13,0.2)' : 'rgba(244,246,244,0.2)';
         ctx.fillRect(0, 0, w, h);
 
-        // Distance de connexion adaptée à la largeur de l'écran
-        const connectDist = Math.min(80, w / 12);
+        // Distance de connexion adaptée à la largeur
+        const connectDist = w < 768 ? 60 : 80;
 
         particles.forEach((p, i) => {
             p.update();
